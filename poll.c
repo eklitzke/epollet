@@ -43,7 +43,6 @@ int main(int argc, char **argv) {
   addr.sin_family = AF_INET;
   addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
   addr.sin_port = htons(PORT);
-  // addr.sin_port = PORT;
   if (bind(sock, (struct sockaddr *)&addr, sizeof(addr)) < 0) {
     perror("bind()");
     return 1;
