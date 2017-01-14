@@ -129,8 +129,7 @@ int main(int argc, char **argv) {
             close(events[i].data.fd);
             break;
           } else {
-            buf[nbytes] = '\0';
-            printf("%d: %s", events[i].data.fd, buf);
+            fwrite(buf, sizeof(char), nbytes, stdout);
           }
         }
       }
